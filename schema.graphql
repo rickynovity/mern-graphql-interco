@@ -1,0 +1,157 @@
+type Category {
+  id: ID!
+
+  """The category's title"""
+  name: String!
+}
+
+type CategoryActionMutationResponse {
+  categories: [Category]
+  category: Category
+  error: String
+  ok: Boolean
+}
+
+input CategoryInput {
+  name: String!
+}
+
+type Formation {
+  category: Category
+  endDate: String
+  id: ID!
+  language: Language
+  objectives: String!
+  progress: Int
+  source: String
+  startDate: String
+  status: Status
+  title: String!
+  trainer: Trainer
+}
+
+type FormationActionMutationResponse {
+  error: String
+  formation: Formation
+  formations: [Formation]
+  ok: Boolean
+}
+
+input FormationInput {
+  categoryId: ID!
+  endDate: String
+  languageId: ID!
+  objectives: String!
+  progress: Int
+  source: String
+  startDate: String
+  statusId: ID!
+  title: String!
+  trainerId: ID!
+}
+
+type Language {
+  id: ID!
+
+  """The language's title"""
+  name: String!
+}
+
+type LanguageActionMutationResponse {
+  error: String
+  language: Language
+  languages: [Language]
+  ok: Boolean
+}
+
+input LanguageInput {
+  name: String!
+}
+
+type Mutation {
+  createCategory(input: CategoryInput!): Category!
+  createFormation(input: FormationInput!): Formation!
+  createLanguage(input: LanguageInput!): Language!
+  createStatus(input: StatusInput!): Status!
+  createTrainer(input: TrainerInput!): Trainer!
+  deleteAllStatus: StatusActionMutationResponse
+  deleteCategories: CategoryActionMutationResponse
+  deleteCategory(id: ID!): CategoryActionMutationResponse
+  deleteFormation(id: ID!): FormationActionMutationResponse
+  deleteFormations: FormationActionMutationResponse
+  deleteLanguage(id: ID!): LanguageActionMutationResponse
+  deleteLanguages: LanguageActionMutationResponse
+  deleteStatus(id: ID!): StatusActionMutationResponse
+  deleteTrainer(id: ID!): TrainerActionMutationResponse
+  deleteTrainers: TrainerActionMutationResponse
+  updateCategory(id: ID!, input: CategoryInput!): Category
+  updateFormation(id: ID!, input: FormationInput!): Formation
+  updateLanguage(id: ID!, input: LanguageInput!): Language
+  updateStatus(id: ID!, input: StatusInput!): Status
+  updateTrainer(id: ID!, input: TrainerInput!): Trainer
+}
+
+type Query {
+  allStatus: [Status!]
+
+  """Query to get categories array for the homepage grid"""
+  categories: [Category!]
+
+  """Query to get a single category by ID for the detailed view"""
+  category(id: ID!): Category!
+  formation(id: ID!): Formation!
+  formations: [Formation!]
+  language(id: ID!): Language
+  languages: [Language!]
+  status(id: ID!): Status
+  trainer(id: ID!): Trainer
+  trainers: [Trainer!]
+}
+
+type Status {
+  id: ID!
+
+  """The status's title"""
+  name: String!
+}
+
+type StatusActionMutationResponse {
+  allStatus: [Status]
+  error: String
+  ok: Boolean
+  status: Status
+}
+
+input StatusInput {
+  name: String!
+}
+
+type Trainer {
+  biography: String
+  contact: TrainerContact
+  id: ID!
+  name: String!
+}
+
+type TrainerActionMutationResponse {
+  error: String
+  ok: Boolean
+  trainer: Trainer
+  trainers: [Trainer]
+}
+
+type TrainerContact {
+  email: String
+  phone: String
+}
+
+input TrainerContactInput {
+  email: String
+  phone: String
+}
+
+input TrainerInput {
+  biography: String
+  contact: TrainerContactInput
+  name: String!
+}

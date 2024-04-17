@@ -1,0 +1,12 @@
+node_modules
+logs
+.env
+.idea
+dist
+.DS_Store
+temp
+uploads
+.env.dev
+.vscode
+tmp
+.drone.env

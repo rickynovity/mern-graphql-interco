@@ -1,0 +1,25 @@
+{
+  "name": "mern-graphql-interco",
+  "version": "1.0.0",
+  "description": "Plateforme de gestion de formation dédiée aux professionnels en période d'inter-contrat dans le domaine du développement logiciel.",
+  "author": "madava",
+  "license": "MIT",
+  "scripts": {
+    "server:dev": "nodemon server/src/index",
+    "getSchema": "graphql-inspector introspect http://localhost:5500/graphql -w ./schema.graphql"
+  },
+  "dependencies": {
+    "@apollo/server": "^4.10.3",
+    "@graphql-inspector/cli": "^4.0.3",
+    "@graphql-tools/merge": "^9.0.3",
+    "@graphql-tools/schema": "^10.0.3",
+    "colors": "^1.4.0",
+    "graphql": "^16.8.1",
+    "graphql-tag": "^2.12.6",
+    "mongoose": "^8.3.2"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.5",
+    "nodemon": "^3.1.0"
+  }
+}
