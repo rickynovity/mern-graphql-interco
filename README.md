@@ -29,7 +29,7 @@
 - **Trainer Management**: Manage trainer details, including biographies and contact details. Associate each trainer with multiple courses. 
 - **Category Management**: Add, modify and delete training categories to organise your training logically and consistently.
 - **Training Status and Language Management**: Use predefined statuses to track the current status of each training course (not started, in progress, completed, blocked). You can also manage the languages available for each course.
-- **Even more 🤩 ...**
+- **And much more 🤩 ...**
 
 
 ## How to use the backend application
@@ -37,10 +37,14 @@
 **1. Installation**
 Clone this GitHub repository on your local machine :
 #### SSH
-`git@github.com:rickynovity/mern-graphql-interco.git` 
+```shell
+git@github.com:rickynovity/mern-graphql-interco.git
+``` 
 
 #### HTTPS   
-`git clone https://github.com/rickynovity/mern-graphql-interco.git`
+```shell
+git clone https://github.com/rickynovity/mern-graphql-interco.git
+```
 
 
     
@@ -49,10 +53,16 @@ Clone this GitHub repository on your local machine :
 
  - Make sure you have Node.js and MongoDB installed on your machine.
  - Create the `.env` in the root of the project by copying the `.env.example`.
- - Install the dependencies by running the following command in the application root directory: `yarn`. 
+ - Install the dependencies by running the following command in the application root directory:
+```shell
+yarn
+``` 
 
 **3. Starting the server
- Start the server by running the following command: `yarn dev`. 
+ Start the server by running the following command:
+ ```shell
+ yarn dev
+```
 
 **4. Accessing the application**
 The application will be accessible at the following address in your web browser:
